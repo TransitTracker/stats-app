@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Stat;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +25,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Model::unguard();
+
+        \Lodata::discover(Stat::class);
     }
 }

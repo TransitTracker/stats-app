@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Facade;
 
 return [
 
+    'redirect_url' => env('REDIRECT_URL', 'https://transittracker.ca'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
